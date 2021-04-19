@@ -61,5 +61,15 @@ public class UserServiceImpl implements UserService {
     public List<User> findAllByJpqlParamsQuery(Integer active, String city) {
         return userRepository.findAllByJpqlParamsQuery(active, city);
     }
+
+    @Override
+    public List<User> findByCity(String city) {
+        return userRepository.findByCity(city);
+    }
+
+    @Override
+    public List<User> findByNameAndSurname(String name, String surname) {
+        return userRepository.findByNameAndSurname(name, surname);
+    }
 }
 

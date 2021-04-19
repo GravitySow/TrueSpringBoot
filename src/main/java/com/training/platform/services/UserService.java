@@ -24,4 +24,8 @@ public interface UserService {
     List<User> findAllByJpqlQuery();
 
     List<User> findAllByJpqlParamsQuery(Integer active, String city);
+
+    List<User> findByCity(String city);
+
+    List<User> findByNameAndSurname(String name, String surname);
 }

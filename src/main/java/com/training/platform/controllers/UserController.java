@@ -71,4 +71,13 @@ public class UserController {
         return userService.findAllByJpqlParamsQuery(Integer.parseInt(active), city);
     }
 
+    @GetMapping(value = "/findAllByCity")
+    public List<User> findAllByCity(@RequestParam String city){
+        return  userService.findByCity(city);
+    }
+
+    @GetMapping(value = "/finaAllByNameAndSurname")
+    public List<User> finaAllByNameAndSurname(@RequestParam String name, @RequestParam String surname){
+        return userService.findByNameAndSurname(name, surname);
+    }
 }
