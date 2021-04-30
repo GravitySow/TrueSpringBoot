@@ -28,4 +28,8 @@ public interface UserRepository extends JpaRepository<User,Integer> {
     public List<User> findByCity(String city);
 
     public List<User> findByNameAndSurname(String name, String surname);
+
+    public  List<User> findByName(String name);
+
+    User findByEmail(String email);
 }

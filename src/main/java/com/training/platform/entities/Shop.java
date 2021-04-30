@@ -3,6 +3,8 @@ package com.training.platform.entities;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +16,8 @@ import java.security.Timestamp;
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
+@EqualsAndHashCode(exclude="user")
+@ToString(exclude = {"user"})
 public class Shop implements Serializable {
     @Id
     @Column(name = "id")
